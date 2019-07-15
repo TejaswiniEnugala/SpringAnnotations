@@ -5,15 +5,21 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfig {
 
     @Bean
-    public Movie getDetails(){
+    public Movie movie(){
         return new Movie(getActor());
     }
 
 
     @Bean
     public Actor getActor(){
-        Actor actor = new Actor("teju","Female",21);
+        Actor actor = new Actor("Bindu","Female",21);
         return actor;
     }
+
+    @Bean(initMethod="customInit", destroyMethod = "customDestroy")
+    public BeanLifeCycleDemoBean beanLifeCycleDemoBean(){
+        return new BeanLifeCycleDemoBean();
+    }
+
 
 }
