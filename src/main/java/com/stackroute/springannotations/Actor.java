@@ -1,38 +1,22 @@
 package com.stackroute.springannotations;
-
 public class Actor {
-        private String name;
-        private String gender;
+    private String name;
+    private String gender;
+    private int age;
 
-        public String getName() {
-            return name;
-        }
+    public Actor(String name, String gender, int age) {
+        this.name = name;
+        this.gender = gender;
+        this.age = age;
+    }
 
-        public String getGender() {
-            return gender;
-        }
 
-        public int getAge() {
-            return age;
-        }
 
-        private int age;
 
-        public void setName(String name) {
-            this.name = name;
-        }
 
-        public void setGender(String gender) {
-            this.gender = gender;
-        }
-
-        public void setAge(int age) {
-            this.age = age;
-        }
-
-        public void actorInfo(){
-            System.out.println("Name:"+name);
-            System.out.println("Gender:"+gender);
-            System.out.println("Age:"+age);
-        }
+    public void actorInfo(){
+        System.out.println("Name:"+name);
+        System.out.println("Gender:"+gender);
+        System.out.println("Age:"+age);
+    }
 }
