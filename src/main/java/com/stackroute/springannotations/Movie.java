@@ -22,13 +22,13 @@ public class Movie implements ApplicationContextAware, BeanFactoryAware, BeanNam
 
     }
 
-    public void setBeanName(String s) {
-        System.out.println(s);
-    }
-
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
         System.out.println("Set Bean Factory");
 
+    }
+
+    public void setBeanName(String s) {
+        System.out.println(s);
     }
 
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
